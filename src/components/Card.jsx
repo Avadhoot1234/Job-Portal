@@ -1,5 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { CiCalendar, CiLocationOn } from "react-icons/ci";
+import { CiClock2 } from "react-icons/ci";
+import { FiDollarSign } from "react-icons/fi";
 
 const Card = ({data}) => {
   const {companyName,companyLogo,minPrice,maxPrice,salaryType,jobLocation,employmentType,postingDate,
@@ -13,6 +16,16 @@ const Card = ({data}) => {
         <div>
           <h4 className='text-black mb-1'>{companyName}</h4>
           <h3 className='text-lg font-semibold mb-2'>{jobTitle}</h3>
+          <div className='text-black/70 text-base flex flex-wrap gap-2 mb-2'>
+            <span className='flex items-center gap-2'><CiLocationOn/>{jobLocation}</span>
+            <span className='flex items-center gap-2'><CiClock2/>{employmentType}</span>
+            <span className='flex items-center gap-2'><FiDollarSign/>{minPrice}-{maxPrice}</span>
+            <span className='flex items-center gap-2'><CiCalendar/>{postingDate}</span>
+          </div>
+
+          <p className='text-base text-black/70'>{description}</p>
+        
+        
         </div>
       </Link>
     </section>
