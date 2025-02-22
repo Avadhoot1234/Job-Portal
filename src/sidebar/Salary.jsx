@@ -1,9 +1,27 @@
 import React from 'react'
+import Button from './Button'
+import InputField from '../components/InputField'
 
-const Salary = () => {
+const Salary = ({handleChange,handleClick}) => {
   return (
     <div>
-      Salary
+      <h4 className='text-lg font-medium mb-2'>Salary</h4>
+      <div className=''>
+        <Button onClickHandler={handleClick} value="" title="Hourly"/>
+        <Button onClickHandler={handleClick} value="Monthly" title="Monthly"/>
+        <Button onClickHandler={handleClick} value="Yearly" title="Yearly"/>
+      </div>
+
+      <div>
+      <label className='sidebar-label-container'>
+            <input type='radio' name='test' id='text' value="" onChange={handleChange}></input>
+            <span className='checkmark'></span>All
+      </label>
+        <InputField handleChange={handleChange} value={30} title="< 3000k" name="test"/>
+        <InputField handleChange={handleChange} value={50} title="< 5000k" name="test"/>
+        <InputField handleChange={handleChange} value={80} title="< 8000k" name="test"/>
+        <InputField handleChange={handleChange} value={100} title="< 100000k" name="test"/>
+      </div>
     </div>
   )
 }
