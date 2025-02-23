@@ -3,6 +3,7 @@ import Banner from '../components/Banner'
 import Jobs from './Jobs';
 import Card from '../components/Card';
 import Sidebar from '../sidebar/Sidebar';
+import NewsLetter from '../components/NewsLetter';
 const Home = () => {
   //Handling the search bar with the usestate
 
@@ -131,7 +132,7 @@ const Home = () => {
         </div>
 
         {/* Right side of the content */}
-        <div className='bg-white p-4 rounded'>Right</div>
+        <div className='bg-white p-4 rounded'><NewsLetter/></div>
       </div>
 
     </div>
